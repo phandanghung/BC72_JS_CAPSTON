@@ -1,0 +1,64 @@
+header {
+    // position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    .navbar-brand {
+        font-size: 32px !important;
+        color: #fff !important;
+        font-weight: bold;
+    }
+    #navbar-cart {
+        a {
+            font-size: 16px !important;
+            color: #fff !important;
+            i {
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+.banner {
+    .banner_content {
+        position: relative;
+        background-position: bottom;
+        img {
+            width: 100%;
+        }
+        .banner_desc {
+            color: #640d5f;
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            h2 {
+                font-size: 52px;
+            }
+            p {
+                font-size: 18px;
+                margin: 20px 0;
+            }
+            button {
+                padding: 10px 24px;
+                border: 0;
+                border-radius: 12px;
+                background-color: #ffffff;
+                background-color: #85ffbd;
+                background-color: #8bc6ec;
+                background-image: radial-gradient(
+                    circle farthest-corner at 7.1% 15.6%,
+                    rgba(22, 160, 133, 1) 0%,
+                    rgba(64, 240, 206, 1) 100.3%
+                );
+                color: rgba(255, 255, 255, 0.9);
+                font-weight: bold;
+                :hover {
+                    background-position: right center;
+                }
+            }
+        }
+    }
+}
