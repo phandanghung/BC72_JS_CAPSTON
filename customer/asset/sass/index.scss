@@ -1,3 +1,21 @@
+// variable
+$background-btn: linear-gradient(to right, #eb3349 0%, #f45c43 51%, #eb3349 100%);
+$color-white: #fff;
+// mixin
+@mixin buttonProducts($color-text, $color-bg) {
+    color: $color-text;
+    font-weight: 400;
+    background-image: $color-bg;
+    border-radius: 5px;
+    padding: 15px 25px;
+    background-size: 200% auto;
+    transition: 0.3s;
+    margin: 10px 0;
+    // border: 1px black solid;
+    &:hover {
+        background-position: right center;
+    }
+}
 header {
     // position: fixed;
     width: 100%;
@@ -42,22 +60,35 @@ header {
                 margin: 20px 0;
             }
             button {
-                padding: 10px 24px;
-                border: 0;
-                border-radius: 12px;
-                background-color: #ffffff;
-                background-color: #85ffbd;
-                background-color: #8bc6ec;
-                background-image: radial-gradient(
-                    circle farthest-corner at 7.1% 15.6%,
-                    rgba(22, 160, 133, 1) 0%,
-                    rgba(64, 240, 206, 1) 100.3%
-                );
-                color: rgba(255, 255, 255, 0.9);
+                color: #fff;
                 font-weight: bold;
-                :hover {
+                background-image: $background-btn;
+                background-size: 200% auto;
+                padding: 15px 35px;
+                margin: 20px 0;
+                border-radius: 12px;
+                transition: 0.3s;
+                &:hover {
                     background-position: right center;
                 }
+            }
+        }
+    }
+}
+
+.products {
+    background-color: rgba(255, 255, 255, 0.8);
+    .card {
+        border-radius: 15px;
+        img {
+            margin: 50px auto;
+        }
+        .buttonCard {
+            button:first-child {
+                @include buttonProducts($color-white, $background-btn);
+            }
+            button:nth-child(2) {
+                @include buttonProducts(#000, $background-btn);
             }
         }
     }

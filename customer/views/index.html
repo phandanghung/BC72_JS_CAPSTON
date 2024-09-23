@@ -29,17 +29,19 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- My css -->
     <link rel="stylesheet" href="../asset/css/index.css" />
   </head>
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-gray-700">
         <div class="container">
           <a class="navbar-brand" href="#">CyberPhone</a>
           <div id="navbar-cart">
-            <a class="nav-link" href="#"
+            <a class="nav-link font-medium" href="#"
               ><i class="fa fa-shopping-cart"></i>Shopping cart</a
             >
           </div>
@@ -104,68 +106,20 @@
         </div>
       </div>
     </div>
-    <div class="products">
+    <div class="products py-5">
       <div class="product_title">
         <h2 class="text-center pt-5 pb-3">All Products</h2>
       </div>
       <div class="product_body container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4"></div>
       </div>
     </div>
     <footer>
-      <!-- place footer here -->
+      <div class="bg-black">
+        <p class="py-3 m-0 text-white text-center opacity-75">
+          © 2021 Copyright
+        </p>
+      </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script

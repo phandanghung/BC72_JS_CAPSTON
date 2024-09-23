@@ -40,16 +40,51 @@ header #navbar-cart a i {
   margin: 20px 0;
 }
 .banner .banner_content .banner_desc button {
-  padding: 10px 24px;
-  border: 0;
-  border-radius: 12px;
-  background-color: #ffffff;
-  background-color: #85ffbd;
-  background-color: #8bc6ec;
-  background-image: radial-gradient(circle farthest-corner at 7.1% 15.6%, rgb(22, 160, 133) 0%, rgb(64, 240, 206) 100.3%);
-  color: rgba(255, 255, 255, 0.9);
+  color: #fff;
   font-weight: bold;
+  background-image: linear-gradient(to right, #eb3349 0%, #f45c43 51%, #eb3349 100%);
+  background-size: 200% auto;
+  padding: 15px 35px;
+  margin: 20px 0;
+  border-radius: 12px;
+  transition: 0.3s;
 }
-.banner .banner_content .banner_desc button :hover {
+.banner .banner_content .banner_desc button:hover {
+  background-position: right center;
+}
+
+.products {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.products .card {
+  border-radius: 15px;
+}
+.products .card img {
+  margin: 50px auto;
+}
+.products .card .buttonCard button:first-child {
+  color: #fff;
+  font-weight: 400;
+  background-image: linear-gradient(to right, #eb3349 0%, #f45c43 51%, #eb3349 100%);
+  border-radius: 5px;
+  padding: 15px 25px;
+  background-size: 200% auto;
+  transition: 0.3s;
+  margin: 10px 0;
+}
+.products .card .buttonCard button:first-child:hover {
+  background-position: right center;
+}
+.products .card .buttonCard button:nth-child(2) {
+  color: #000;
+  font-weight: 400;
+  background-image: linear-gradient(to right, #eb3349 0%, #f45c43 51%, #eb3349 100%);
+  border-radius: 5px;
+  padding: 15px 25px;
+  background-size: 200% auto;
+  transition: 0.3s;
+  margin: 10px 0;
+}
+.products .card .buttonCard button:nth-child(2):hover {
   background-position: right center;
 }/*# sourceMappingURL=index.css.map */
