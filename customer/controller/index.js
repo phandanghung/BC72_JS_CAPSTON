@@ -2,17 +2,16 @@ const BASE_LINK = "https://66e65d8617055714e5896820.mockapi.io/phoneData";
 let cartShop = [];
 // gọi API lấy data
 let fetchData = async () => {
-  let data = await axios({
+  let res = await axios({
     url: BASE_LINK,
     method: "GET",
-  });
-  console.log("👉 ~ fetchData ~ data:", data.data);
-  // .then((res) => {
-  //   renderProduct(res.data);
-  // })
-  // .catch((err) => {
-  //   console.log("👉 ~ err:", err);
-  // });
+  })
+    .then((res) => {
+      renderProduct(res.data);
+    })
+    .catch((err) => {
+      console.log("👉 ~ err:", err);
+    });
 };
 fetchData();
 // render product
