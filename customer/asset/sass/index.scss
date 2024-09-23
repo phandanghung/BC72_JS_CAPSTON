@@ -1,13 +1,13 @@
 // variable
-$background-btn: linear-gradient(to right, #eb3349 0%, #f45c43 51%, #eb3349 100%);
-$color-white: #fff;
+$background-gradient-1: linear-gradient(to right, #eb3349 0%, #f45c43 51%, #eb3349 100%);
+$background-gradient-2: linear-gradient(to right, #ff8008 0%, #ffc837 51%, #ff8008 100%);
 // mixin
-@mixin buttonProducts($color-text, $color-bg) {
-    color: $color-text;
-    font-weight: 400;
+@mixin buttonProducts($color-bg) {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
     background-image: $color-bg;
     border-radius: 5px;
-    padding: 15px 25px;
+    padding: 10px 25px;
     background-size: 200% auto;
     transition: 0.3s;
     margin: 10px 0;
@@ -15,6 +15,11 @@ $color-white: #fff;
     &:hover {
         background-position: right center;
     }
+}
+
+.container {
+    width: 90% !important;
+    margin: 0 auto !important;
 }
 header {
     // position: fixed;
@@ -31,8 +36,8 @@ header {
     }
     #navbar-cart {
         a {
-            font-size: 16px !important;
-            color: #fff !important;
+            font-size: 20px;
+            color: #fff;
             i {
                 padding-right: 20px;
             }
@@ -62,7 +67,7 @@ header {
             button {
                 color: #fff;
                 font-weight: bold;
-                background-image: $background-btn;
+                background-image: $background-gradient-1;
                 background-size: 200% auto;
                 padding: 15px 35px;
                 margin: 20px 0;
@@ -85,10 +90,10 @@ header {
         }
         .buttonCard {
             button:first-child {
-                @include buttonProducts($color-white, $background-btn);
+                @include buttonProducts($background-gradient-1);
             }
             button:nth-child(2) {
-                @include buttonProducts(#000, $background-btn);
+                @include buttonProducts($background-gradient-2);
             }
         }
     }

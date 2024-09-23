@@ -1,3 +1,8 @@
+.container {
+  width: 90% !important;
+  margin: 0 auto !important;
+}
+
 header {
   width: 100%;
   top: 0;
@@ -12,8 +17,8 @@ header .navbar-brand {
   font-weight: bold;
 }
 header #navbar-cart a {
-  font-size: 16px !important;
-  color: #fff !important;
+  font-size: 20px;
+  color: #fff;
 }
 header #navbar-cart a i {
   padding-right: 20px;
@@ -63,11 +68,11 @@ header #navbar-cart a i {
   margin: 50px auto;
 }
 .products .card .buttonCard button:first-child {
-  color: #fff;
-  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
   background-image: linear-gradient(to right, #eb3349 0%, #f45c43 51%, #eb3349 100%);
   border-radius: 5px;
-  padding: 15px 25px;
+  padding: 10px 25px;
   background-size: 200% auto;
   transition: 0.3s;
   margin: 10px 0;
@@ -76,11 +81,11 @@ header #navbar-cart a i {
   background-position: right center;
 }
 .products .card .buttonCard button:nth-child(2) {
-  color: #000;
-  font-weight: 400;
-  background-image: linear-gradient(to right, #eb3349 0%, #f45c43 51%, #eb3349 100%);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  background-image: linear-gradient(to right, #ff8008 0%, #ffc837 51%, #ff8008 100%);
   border-radius: 5px;
-  padding: 15px 25px;
+  padding: 10px 25px;
   background-size: 200% auto;
   transition: 0.3s;
   margin: 10px 0;
