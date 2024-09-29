@@ -44,7 +44,11 @@ window.productFilter = productFilter;
 
 window.addToCart = (id) => {
   let data = listPhone;
-  if (cartShop) cartShop.push(data[id - 1]);
-  console.log("👉 ~ cartShop:", data[id - 1]);
-  console.log("👉 ~ cartShop:", cartShop);
+
+  if (cartShop.includes(data[id - 1])) {
+    data[id - 1].quanity += 1;
+  } else {
+    cartShop.push(data[id - 1]);
+  }
+  renderCart(cartShop);
 };

@@ -18,15 +18,6 @@ export let renderProduct = (phoneArr) => {
                   <button href="#">Buy Now</button>
                   <button href="#" onclick="addToCart(${id})" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add to Cart</button>
                 </div>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                  <div class="offcanvas-header">
-                    <h5 id="offcanvasRightLabel" class="text-xl font-bold">GIỎ HÀNG</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                  </div>
-                  <div id="shopCart" class="offcanvas-body">
-                    
-                  </div>
-                </div>
               </div>
             </div>
         </div>
@@ -38,18 +29,16 @@ export let renderProduct = (phoneArr) => {
 export let renderCart = (cartArr) => {
   let content = "";
   cartArr.reverse().forEach((item) => {
-    let { name, price, img, desc, quanity } = cartArr;
+    let { id, name, price, img, desc, quanity } = item;
     return (content += `
-      <table>
         <tr>
-          <td>${img}</td>
+          <td><img src="${img}"/></td>
           <td>${name}</td>
           <td>${price}</td>
           <td>${desc}</td>
           <td>${quanity}</td>
         </tr>
-      </table>
     `);
   });
-  document.querySelector("#shopCart").innerHTML = content;
+  document.querySelector("#shopCart table").innerHTML = content;
 };
