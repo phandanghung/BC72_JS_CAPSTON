@@ -44,8 +44,7 @@ window.productFilter = productFilter;
 
 window.addToCart = (id) => {
   let data = listPhone;
-
-  cartShop.push(data[id - 1]);
+  if (cartShop) cartShop.push(data[id - 1]);
   console.log("👉 ~ cartShop:", data[id - 1]);
   console.log("👉 ~ cartShop:", cartShop);
 };
