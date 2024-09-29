@@ -119,6 +119,16 @@
         <h2 class="text-center text-4xl font-medium">-All Products-</h2>
       </div>
       <div class="product_body container">
+        <select
+          id="filterproducts"
+          onchange="productFilter()"
+          class="form-select w-32 my-3"
+          aria-label="Default select example"
+        >
+          <option selected>Sắp xếp</option>
+          <option value="iphone">Iphone</option>
+          <option value="samsung">Samsung</option>
+        </select>
         <div class="row row-cols-1 row-cols-md-3 g-4"></div>
       </div>
     </div>
@@ -168,6 +178,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <!-- My js -->
-    <script src="../controller/index.js"></script>
+    <!-- <script src="../controller/controller.js"></script> -->
+    <script type="module" src="../controller/index.js"></script>
   </body>
 </html>
