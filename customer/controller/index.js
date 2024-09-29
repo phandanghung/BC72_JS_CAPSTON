@@ -1,5 +1,5 @@
 import { CartItem } from "../models/model.js";
-import { renderProduct } from "./controller.js";
+import { renderCart, renderProduct } from "./controller.js";
 
 const BASE_LINK = "https://66e65d8617055714e5896820.mockapi.io/phoneData";
 let cartShop = [];
@@ -44,7 +44,6 @@ window.productFilter = productFilter;
 
 window.addToCart = (id) => {
   let data = listPhone;
-
   if (cartShop.includes(data[id - 1])) {
     data[id - 1].quanity += 1;
   } else {
@@ -52,3 +51,25 @@ window.addToCart = (id) => {
   }
   renderCart(cartShop);
 };
+
+let plusQuanity = (id) => {
+  let inputQuanity = document.querySelector(`#quanityItem${id}`).value;
+  let data = cartShop;
+  if (data[id - 1].quanity >= 0) {
+    data[id - 1].quanity++;
+  }
+  inputQuanity = data[id - 1].quanity;
+  document.querySelector(`#quanityItem${id}`).value = inputQuanity;
+};
+
+let minusQuanity = (id) => {
+  let inputQuanity = document.querySelector(`#quanityItem${id}`).value;
+  let data = cartShop;
+  if (data[id - 1].quanity >= 0) {
+    data[id - 1].quanity--;
+  }
+  inputQuanity = data[id - 1].quanity;
+  document.querySelector(`#quanityItem${id}`).value = inputQuanity;
+};
+window.plusQuanity = plusQuanity;
+window.minusQuanity = minusQuanity;
