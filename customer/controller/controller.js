@@ -31,7 +31,7 @@ export let renderCart = (cartArr) => {
   cartArr.forEach((item) => {
     let { id, name, price, img, desc, quanity } = item;
     return (content += `
-          <div class="row mb-5">
+          <div class="row mb-3 p-6 shadow-md">
             <div class="col-4 d-flex flex-column align-item-center justify-center">
                 <img src="${img}"/>
             </div>
