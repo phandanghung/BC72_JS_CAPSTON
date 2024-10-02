@@ -6,6 +6,6 @@ export class CartItem {
       (this.img = img),
       (this.desc = desc),
       (this.type = type),
-      (this.quanity = 1);
+      (this.quanity = quanity);
   }
 }
