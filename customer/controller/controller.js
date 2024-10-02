@@ -28,25 +28,32 @@ export let renderProduct = (phoneArr) => {
 
 export let renderCart = (cartArr) => {
   let content = "";
+  let totalSum = 0;
   cartArr.forEach((item) => {
-    let { id, name, price, img, desc, quanity } = item;
+    let { id, name, price, img, desc, quantity } = item;
+    let itemSum = price * quantity;
+    totalSum += itemSum;
     return (content += `
           <div class="row mb-5">
             <div class="col-4 d-flex flex-column align-item-center justify-center">
                 <img src="${img}"/>
             </div>
-            <div class="col-8 ">
-                <h3 class="fs-5 fw-bold">${name}</h3>
+            <div class="col-8">
+                <div class="remove d-flex justify-content-between">
+                  <h3 class="fs-5 fw-bold">${name}</h3>
+                  <button onclick="removeItem(${id})"><i class="fa fa-trash-alt"></i></button>
+                </div>
                 <p class="mt-3 fs-6 fst-italic">${desc}</p>
                 <h4 class="fs-4 fw-bold text-danger">${price}$</h4>
                 <div class="upDownButton d-flex justify-between">
-                  <button onclick="minusQuanity(${id})" class="btn border-2"><i class="fa fa-minus"></i></button>
-                  <input type="text" id="quanityItem${id}" class="w-25 border-2" name="quanityItem" value="${quanity}">
-                  <button onclick="plusQuanity(${id})" class="btn border-2"><i class="fa fa-plus"></i></button>
+                  <button onclick="minusQuantity(${id})" class="btn border-2"><i class="fa fa-minus"></i></button>
+                  <input type="text" id="quantityItem${id}" class="w-25 border-2" name="quantityItem" value="${quantity}" readonly>
+                  <button onclick="plusQuantity(${id})" class="btn border-2"><i class="fa fa-plus"></i></button>
                 </div>
             </div>
           </div>
     `);
   });
+  document.querySelector("#totalPrice").innerHTML = `Tổng cộng: ${totalSum}$`;
   document.querySelector("#shopCart").innerHTML = content;
 };
