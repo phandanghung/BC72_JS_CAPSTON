@@ -8,7 +8,6 @@ let samsungArr = [];
 
 var dataJson = localStorage.getItem("CARTSHOP_JSON");
 cartShop = JSON.parse(dataJson);
-renderCart(cartShop);
 // gọi API lấy data
 let fetchData = async () => {
   let res = await axios({
