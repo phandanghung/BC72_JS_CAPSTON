@@ -29,7 +29,7 @@ export let renderProduct = (phoneArr) => {
 export let renderCart = (cartArr) => {
   let content = "";
   let totalSum = 0;
-  cartArr.forEach((item) => {
+  cartArr.forEach(function (item) {
     let { id, name, price, img, desc, quantity } = item;
     let itemSum = price * quantity;
     totalSum += itemSum;
