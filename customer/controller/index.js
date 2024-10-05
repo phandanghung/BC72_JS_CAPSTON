@@ -1,4 +1,4 @@
-import { CartItem } from "../models/model.js";
+// import { CartItem } from "../models/model.js";
 import { renderCart, renderProduct } from "./controller.js";
 
 const BASE_LINK = "https://66e65d8617055714e5896820.mockapi.io/phoneData";
@@ -16,6 +16,7 @@ let fetchData = async () => {
     method: "GET",
   });
   let listPhone = res.data;
+  console.log("👉 ~ fetchData ~ listPhone:", listPhone);
   splitArr(listPhone);
   renderProduct(listPhone);
 };
